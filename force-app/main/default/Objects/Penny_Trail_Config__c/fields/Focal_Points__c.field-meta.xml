@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Focal_Points__c</fullName>
+    <label>Focal Points</label>
+    <type>LongTextArea</type>
+    <length>32768</length>
+    <visibleLines>5</visibleLines>
+    <required>false</required>
+    <externalId>false</externalId>
+    <description>Key focus areas Penny should emphasize when coaching learners on this trail. Injected into Layer 2 of the Penny prompt.</description>
+    <inlineHelpText>List the key topics and skills Penny should emphasize for this trail. Use bullet points. Example: • Salesforce fundamentals • Admin certification prep • Job search strategy.</inlineHelpText>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Penny_Role__c</fullName>
+    <label>Penny Role</label>
+    <type>Text</type>
+    <length>255</length>
+    <required>true</required>
+    <unique>false</unique>
+    <externalId>false</externalId>
+    <description>Penny's coaching role description for this trail. Injected into Layer 1 of the Penny prompt to define her identity and coaching stance. Example: Coaching Companion — warm, structured, foundational.</description>
+    <inlineHelpText>Describe Penny's role for this trail. Example: Coaching Companion — warm, structured, foundational. This text is injected directly into Penny's prompt.</inlineHelpText>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Penny Trail Config</label>
+    <pluralLabel>Penny Trail Configs</pluralLabel>
+    <nameField>
+        <label>Penny Trail Config Name</label>
+        <type>AutoNumber</type>
+        <displayFormat>PTC-{0000}</displayFormat>
+        <startingNumber>1</startingNumber>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <allowReports>true</allowReports>
+    <allowActivities>false</allowActivities>
+    <enableHistory>false</enableHistory>
+    <enableChatter>false</enableChatter>
+    <description>Trail persona configuration for Penny AI. One record per Trail ID. Controls Penny coaching tone, focal points, and behavioral instructions per trail.</description>
+</CustomObject>
