@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Penny Badge</label>
+    <pluralLabel>Penny Badges</pluralLabel>
+    <nameField>
+        <label>Penny Badge Name</label>
+        <type>AutoNumber</type>
+        <displayFormat>PBG-{0000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <enableReports>true</enableReports>
+    <enableActivities>false</enableActivities>
+    <enableHistory>false</enableHistory>
+    <enableChatter>false</enableChatter>
+    <fields>
+        <fullName>Learner__c</fullName>
+        <label>Learner</label>
+        <type>Lookup</type>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Penny Badges</relationshipLabel>
+        <relationshipName>Penny_Badges</relationshipName>
+        <required>true</required>
+        <description>Lookup to the learner Contact this badge was awarded to. Required. Added June 2026.</description>
+        <inlineHelpText>Select the learner this badge was awarded to.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Badge_Key__c</fullName>
+        <label>Badge Key</label>
+        <type>Text</type>
+        <length>50</length>
+        <required>true</required>
+        <description>Machine-readable badge identifier. Values: first_deploy / sprint_complete / qa_champion / client_win / code_reviewer / career_ready. Added June 2026.</description>
+        <inlineHelpText>The badge identifier key. Must match the approved badge key list exactly.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Badge_Name__c</fullName>
+        <label>Badge Name</label>
+        <type>Text</type>
+        <length>255</length>
+        <required>true</required>
+        <description>Human-readable display name for this badge. Required. e.g. First Deployment. Added June 2026.</description>
+        <inlineHelpText>The display name shown to learners for this badge.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Awarded_By__c</fullName>
+        <label>Awarded By</label>
+        <type>Picklist</type>
+        <required>false</required>
+        <description>Whether badge was awarded by system (Penny automatically) or coach (manually). Values: system / coach. Added June 2026.</description>
+        <inlineHelpText>Who awarded this badge — Penny automatically (system) or a coach manually.</inlineHelpText>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value><fullName>system</fullName><label>system</label><default>true</default></value>
+                <value><fullName>coach</fullName><label>coach</label><default>false</default></value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Note__c</fullName>
+        <label>Note</label>
+        <type>TextArea</type>
+        <required>false</required>
+        <description>Optional note from a coach when manually awarding this badge. Added June 2026.</description>
+        <inlineHelpText>Add a personal note when manually awarding this badge to a learner. Optional.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Awarded_At__c</fullName>
+        <label>Awarded At</label>
+        <type>DateTime</type>
+        <required>true</required>
+        <description>Date and time this badge was awarded. Required. Added June 2026.</description>
+        <inlineHelpText>The date and time this badge was awarded. Set automatically.</inlineHelpText>
+    </fields>
+</CustomObject>

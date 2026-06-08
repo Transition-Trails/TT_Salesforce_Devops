@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Penny Classroom Nudge</label>
+    <pluralLabel>Penny Classroom Nudges</pluralLabel>
+    <nameField>
+        <label>Penny Classroom Nudge Name</label>
+        <type>AutoNumber</type>
+        <displayFormat>PCN-{0000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <enableReports>true</enableReports>
+    <enableActivities>false</enableActivities>
+    <enableHistory>false</enableHistory>
+    <enableChatter>false</enableChatter>
+    <fields>
+        <fullName>Learner__c</fullName>
+        <label>Learner</label>
+        <type>Lookup</type>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Penny Classroom Nudges</relationshipLabel>
+        <relationshipName>Penny_Classroom_Nudges</relationshipName>
+        <required>true</required>
+        <description>Lookup to the learner Contact this nudge was sent for. Required. Added June 2026.</description>
+        <inlineHelpText>Select the learner this nudge was sent to.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Course_Work_ID__c</fullName>
+        <label>Course Work ID</label>
+        <type>Text</type>
+        <length>255</length>
+        <required>true</required>
+        <description>Google Classroom assignment ID this nudge is for. Required. Part of dedup constraint. Added June 2026.</description>
+        <inlineHelpText>The Google Classroom assignment ID. Set automatically by the nudge system.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Nudge_Date__c</fullName>
+        <label>Nudge Date</label>
+        <type>Date</type>
+        <required>true</required>
+        <description>Date this nudge was scheduled for. Required. Part of dedup constraint — one nudge per learner per assignment per day. Added June 2026.</description>
+        <inlineHelpText>The date this nudge was scheduled. One nudge per learner per assignment per day is allowed.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Sent_At__c</fullName>
+        <label>Sent At</label>
+        <type>DateTime</type>
+        <required>true</required>
+        <description>Exact date and time the nudge was sent. Required. Set automatically when dispatched. Added June 2026.</description>
+        <inlineHelpText>The exact time this nudge was sent. Set automatically.</inlineHelpText>
+    </fields>
+</CustomObject>

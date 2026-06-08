@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Penny Weekly Report</label>
+    <pluralLabel>Penny Weekly Reports</pluralLabel>
+    <nameField>
+        <label>Penny Weekly Report Name</label>
+        <type>AutoNumber</type>
+        <displayFormat>PWR-{0000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <enableReports>true</enableReports>
+    <enableActivities>false</enableActivities>
+    <enableHistory>false</enableHistory>
+    <enableChatter>false</enableChatter>
+    <fields>
+        <fullName>Week_Start__c</fullName>
+        <label>Week Start</label>
+        <type>Date</type>
+        <required>true</required>
+        <description>Start date of the week this report covers. Required. Added June 2026.</description>
+        <inlineHelpText>The Monday that starts the week this report covers.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Week_End__c</fullName>
+        <label>Week End</label>
+        <type>Date</type>
+        <required>true</required>
+        <description>End date of the week this report covers. Required. Added June 2026.</description>
+        <inlineHelpText>The Sunday that ends the week this report covers.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Top_Themes__c</fullName>
+        <label>Top Themes</label>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <visibleLines>5</visibleLines>
+        <required>false</required>
+        <description>Gemini-synthesized themes from Penny interaction logs for the week. Added June 2026.</description>
+        <inlineHelpText>Key themes from learner conversations this week. Generated automatically by Penny.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Support_Flags__c</fullName>
+        <label>Support Flags</label>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <visibleLines>5</visibleLines>
+        <required>false</required>
+        <description>Learners flagged this week by support need: Momentum / Clarity / Confidence. Added June 2026.</description>
+        <inlineHelpText>Learners who may need extra support this week. Generated automatically by Penny.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Suggested_Actions__c</fullName>
+        <label>Suggested Actions</label>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <visibleLines>5</visibleLines>
+        <required>false</required>
+        <description>Penny recommended actions for Angela or coaches for the coming week. Added June 2026.</description>
+        <inlineHelpText>Recommended actions for coaches and Angela this week. Generated automatically by Penny.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Trail_Breakdown__c</fullName>
+        <label>Trail Breakdown</label>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <visibleLines>5</visibleLines>
+        <required>false</required>
+        <description>Per-trail summary of learner activity for the week. Added June 2026.</description>
+        <inlineHelpText>Activity summary broken down by trail. Generated automatically by Penny.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Generated_At__c</fullName>
+        <label>Generated At</label>
+        <type>DateTime</type>
+        <required>true</required>
+        <description>Date and time this weekly report was generated. Required. Added June 2026.</description>
+        <inlineHelpText>The date and time this report was generated. Set automatically.</inlineHelpText>
+    </fields>
+</CustomObject>

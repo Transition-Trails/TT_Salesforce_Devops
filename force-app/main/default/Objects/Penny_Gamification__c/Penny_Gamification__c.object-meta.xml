@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Penny Gamification</label>
+    <pluralLabel>Penny Gamification Records</pluralLabel>
+    <nameField>
+        <label>Penny Gamification Name</label>
+        <type>AutoNumber</type>
+        <displayFormat>PGM-{0000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <enableReports>true</enableReports>
+    <enableActivities>false</enableActivities>
+    <enableHistory>false</enableHistory>
+    <enableChatter>false</enableChatter>
+    <fields>
+        <fullName>Learner__c</fullName>
+        <label>Learner</label>
+        <type>Lookup</type>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Penny Gamification Records</relationshipLabel>
+        <relationshipName>Penny_Gamification_Records</relationshipName>
+        <required>true</required>
+        <description>Lookup to the learner Contact this points transaction is for. Required. Added June 2026.</description>
+        <inlineHelpText>Select the learner this points transaction belongs to.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Points__c</fullName>
+        <label>Points</label>
+        <type>Number</type>
+        <precision>6</precision>
+        <scale>0</scale>
+        <required>true</required>
+        <description>Points earned in this transaction. Required. Added June 2026.</description>
+        <inlineHelpText>The number of points earned in this transaction.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Sprint_Points__c</fullName>
+        <label>Sprint Points</label>
+        <type>Number</type>
+        <precision>6</precision>
+        <scale>0</scale>
+        <required>false</required>
+        <description>Points earned this sprint. Added June 2026.</description>
+        <inlineHelpText>The learner total points earned in the current sprint.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Sprint_Number__c</fullName>
+        <label>Sprint Number</label>
+        <type>Number</type>
+        <precision>4</precision>
+        <scale>0</scale>
+        <required>false</required>
+        <description>The sprint number this transaction is associated with. Added June 2026.</description>
+        <inlineHelpText>The sprint number this points transaction is linked to.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Reason__c</fullName>
+        <label>Reason</label>
+        <type>Text</type>
+        <length>255</length>
+        <required>false</required>
+        <description>Why these points were awarded. e.g. Story completed / Badge awarded / Quest submitted. Added June 2026.</description>
+        <inlineHelpText>The reason for this points transaction.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Awarded_By__c</fullName>
+        <label>Awarded By</label>
+        <type>Lookup</type>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>Penny Gamification Records</relationshipLabel>
+        <relationshipName>Awarded_Gamification</relationshipName>
+        <required>false</required>
+        <description>Lookup to User who awarded these points. Null means Penny awarded them automatically. Added June 2026.</description>
+        <inlineHelpText>The user who awarded these points. Leave blank if Penny awarded them automatically.</inlineHelpText>
+    </fields>
+</CustomObject>

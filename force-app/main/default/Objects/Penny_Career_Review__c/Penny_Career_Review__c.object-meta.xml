@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Penny Career Review</label>
+    <pluralLabel>Penny Career Reviews</pluralLabel>
+    <nameField>
+        <label>Penny Career Review Name</label>
+        <type>AutoNumber</type>
+        <displayFormat>PCR-{0000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <enableReports>true</enableReports>
+    <enableActivities>false</enableActivities>
+    <enableHistory>false</enableHistory>
+    <enableChatter>false</enableChatter>
+    <fields>
+        <fullName>Learner__c</fullName>
+        <label>Learner</label>
+        <type>Lookup</type>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Penny Career Reviews</relationshipLabel>
+        <relationshipName>Penny_Career_Reviews</relationshipName>
+        <required>true</required>
+        <description>Lookup to the learner Contact this career review is for. Required. Added June 2026.</description>
+        <inlineHelpText>Select the learner this career review belongs to.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Review_Mode__c</fullName>
+        <label>Review Mode</label>
+        <type>Text</type>
+        <length>50</length>
+        <required>false</required>
+        <description>What materials Penny reviewed. Values: resume / linkedin / both. Added June 2026.</description>
+        <inlineHelpText>What Penny reviewed: resume, LinkedIn profile, or both.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Readiness_Label__c</fullName>
+        <label>Readiness Label</label>
+        <type>Text</type>
+        <length>50</length>
+        <required>false</required>
+        <description>Penny overall readiness assessment. e.g. Strong Candidate / Developing / Needs Work. Added June 2026.</description>
+        <inlineHelpText>Penny overall readiness label for this learner.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Area_Scores__c</fullName>
+        <label>Area Scores</label>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <visibleLines>5</visibleLines>
+        <required>false</required>
+        <description>JSON scores for 5 dimensions: Experience Relevance, Credentials, Professional Presence, Communication Clarity, Career Trajectory. Added June 2026.</description>
+        <inlineHelpText>Stores Penny dimension scores as JSON. Set automatically at review time.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Feedback_JSON__c</fullName>
+        <label>Feedback JSON</label>
+        <type>LongTextArea</type>
+        <length>32768</length>
+        <visibleLines>5</visibleLines>
+        <required>false</required>
+        <description>Structured AI feedback per dimension stored as JSON. Added June 2026.</description>
+        <inlineHelpText>Stores Penny detailed feedback as JSON. Set automatically at review time.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Target_Role__c</fullName>
+        <label>Target Role</label>
+        <type>Text</type>
+        <length>255</length>
+        <required>false</required>
+        <description>The role the learner is targeting at time of review. Added June 2026.</description>
+        <inlineHelpText>The role this learner is targeting. Used to contextualise the career review feedback.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Reviewed_At__c</fullName>
+        <label>Reviewed At</label>
+        <type>DateTime</type>
+        <required>true</required>
+        <description>Date and time this career review was completed. Required. GetCareerReview action checks if within 30 days of today. Added June 2026.</description>
+        <inlineHelpText>The date and time this review was completed. Set automatically.</inlineHelpText>
+    </fields>
+</CustomObject>
