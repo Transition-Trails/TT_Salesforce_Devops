@@ -1,12 +1,12 @@
-{
+﻿{
   "packageDirectories": [
     {
       "path": "force-app",
       "default": true
     }
   ],
-  "name": "dx-empty",
+  "name": "TT_Salesforce_Devops",
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sfdcLoginUrl": "https://test.salesforce.com",
   "sourceApiVersion": "64.0"
 }
