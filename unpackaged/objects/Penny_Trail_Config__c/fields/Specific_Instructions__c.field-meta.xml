@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specific_Instructions__c</fullName>
+    <label>Specific Instructions</label>
+    <type>LongTextArea</type>
+    <length>32768</length>
+    <visibleLines>5</visibleLines>
+    <required>false</required>
+    <externalId>false</externalId>
+    <description>Hardcoded behavioral rules and guardrails for Penny on this trail. Injected into Layer 2 of the Penny prompt. Use for trail-specific constraints that override general behavior.</description>
+    <inlineHelpText>Enter specific rules Penny must follow for this trail. Example: Always check in on blockers before giving advice. Never recommend skipping sprint reviews. These rules override Penny's default behavior.</inlineHelpText>
+</CustomField>

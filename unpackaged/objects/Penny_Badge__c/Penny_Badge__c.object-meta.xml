@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <label>Penny Badge</label>
     <pluralLabel>Penny Badges</pluralLabel>
@@ -12,7 +12,7 @@
     <enableReports>true</enableReports>
     <enableActivities>false</enableActivities>
     <enableHistory>false</enableHistory>
-    
+    <enableChatter>false</enableChatter>
     <fields>
         <fullName>Learner__c</fullName>
         <label>Learner</label>
@@ -48,7 +48,7 @@
         <type>Picklist</type>
         <required>false</required>
         <description>Whether badge was awarded by system (Penny automatically) or coach (manually). Values: system / coach. Added June 2026.</description>
-        <inlineHelpText>Who awarded this badge � Penny automatically (system) or a coach manually.</inlineHelpText>
+        <inlineHelpText>Who awarded this badge — Penny automatically (system) or a coach manually.</inlineHelpText>
         <valueSet>
             <valueSetDefinition>
                 <sorted>false</sorted>

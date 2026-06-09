@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trail_ID__c</fullName>
+    <label>Trail ID</label>
+    <type>Text</type>
+    <length>50</length>
+    <required>true</required>
+    <unique>true</unique>
+    <caseSensitive>false</caseSensitive>
+    <externalId>false</externalId>
+    <description>Unique identifier for this trail persona. Values: guided_trail · explorer_journey · trail_of_mastery · community_alumni. Used by GetTrailConfig Agentforce action to look up the correct config.</description>
+    <inlineHelpText>Enter the trail identifier exactly as used in the system. Values: guided_trail, explorer_journey, trail_of_mastery, community_alumni. Must be unique — only one config record per trail.</inlineHelpText>
+</CustomField>

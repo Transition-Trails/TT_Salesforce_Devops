@@ -13,6 +13,6 @@
     <allowReports>true</allowReports>
     <allowActivities>false</allowActivities>
     <enableHistory>false</enableHistory>
-    <enableChatter>false</enableChatter>
+    
     <description>Trail persona configuration for Penny AI. One record per Trail ID. Controls Penny coaching tone, focal points, and behavioral instructions per trail.</description>
 </CustomObject>

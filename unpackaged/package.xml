@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Penny_Badge__c</members>
+        <members>Penny_Career_Review__c</members>
+        <members>Penny_Classroom_Nudge__c</members>
+        <members>Penny_Gamification__c</members>
+        <members>Penny_Interaction_Log__c</members>
+        <members>Penny_Quest_Submission__c</members>
+        <members>Penny_Trail_Config__c</members>
+        <members>Penny_Weekly_Report__c</members>
+        <name>CustomObject</name>
+    </types>
+    <version>64.0</version>
+</Package>
