@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubstackNewsletter</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <columns>Platform__c</columns>
+    <columns>DateUploaded__c</columns>
+    <columns>Planned_Publication_Date__c</columns>
+    <columns>Date_Published__c</columns>
+    <columns>Location__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Platform__c</field>
+        <operation>equals</operation>
+        <value>SubstackNotesFromTheTrail</value>
+    </filters>
+    <label>Substack (Newsletter)</label>
+</ListView>

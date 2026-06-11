@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Content_Pillars__c</fullName>
+    <description>Which of our content pillar(s) would this content be associated with</description>
+    <inlineHelpText>Which of our content pillar(s) would this content be associated with</inlineHelpText>
+    <label>Content Pillars</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>SDLC</fullName>
+                <default>false</default>
+                <label>SDLC</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Personal Growth</fullName>
+                <default>false</default>
+                <label>Personal Growth</label>
+            </value>
+            <value>
+                <fullName>NonProfit</fullName>
+                <default>false</default>
+                <label>NonProfit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

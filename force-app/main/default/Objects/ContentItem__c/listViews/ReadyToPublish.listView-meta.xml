@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReadyToPublish</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <columns>ContentTopic__c</columns>
+    <columns>Format__c</columns>
+    <columns>Total_Publications__c</columns>
+    <columns>Content_Location__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Ready to Publish</value>
+    </filters>
+    <label>04 Ready to Publish</label>
+</ListView>

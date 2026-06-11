@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TheGuidedTrail</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <columns>ContentTopic__c</columns>
+    <columns>Format__c</columns>
+    <columns>Status__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>Content_Pillars__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ContentTopic__c</field>
+        <operation>contains</operation>
+        <value>Guided</value>
+    </filters>
+    <label>The Guided Trail</label>
+</ListView>

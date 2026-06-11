@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Create a task for a new case</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Person assigned to the case</description>
+        <name>AssignedTo</name>
+        <dataType>String</dataType>
+        <expression>IF(ISBLANK({!$Record.ServiceContract.Primary_Service_Provider__c}),&apos;005Hp00000jVjh8IAC&apos;,{!$Record.ServiceContract.Primary_Service_Provider__c})</expression>
+    </formulas>
+    <formulas>
+        <description>Estimated due date is 14 days from current date.</description>
+        <name>DueDate</name>
+        <dataType>Date</dataType>
+        <expression>{!$Flow.CurrentDate}+7</expression>
+    </formulas>
+    <formulas>
+        <description>title of the task</description>
+        <name>TaskSubject</name>
+        <dataType>String</dataType>
+        <expression>&apos;Case: &apos;+{!$Record.Subject}</expression>
+    </formulas>
+    <interviewLabel>Case - Create task for a new case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Create task for a new case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create a task against work is logged</description>
+        <name>Create_Task</name>
+        <label>Create Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>DueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>AssignedTo</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>TaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Task</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

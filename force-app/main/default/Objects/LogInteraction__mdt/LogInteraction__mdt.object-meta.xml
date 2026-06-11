@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Information related to logging interaction with a person</description>
+    <label>Log Interaction</label>
+    <pluralLabel>Log Interactions</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

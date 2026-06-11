@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>hugh@transitiontrails.org</contactEmail>
+    <description>Dev Version
+External App to allow for the Claude MCP server to talk to Salesforce. Scope will include both read and write actions.</description>
+    <distributionState>Local</distributionState>
+    <iconUrl>https://login.salesforce.com/logos/Salesforce/Salesforce/logo.png</iconUrl>
+    <infoUrl>https://transitiontrails.org</infoUrl>
+    <isProtected>false</isProtected>
+    <label>TT_DEV Claude MCP Connection</label>
+    <logoUrl>https://login.salesforce.com/logos/Salesforce/Salesforce/icon.png</logoUrl>
+    <orgScopedExternalApp>00DHp00000Auz8Y:TT_DEV_Claude_MCP_Connection</orgScopedExternalApp>
+</ExternalClientApplication>

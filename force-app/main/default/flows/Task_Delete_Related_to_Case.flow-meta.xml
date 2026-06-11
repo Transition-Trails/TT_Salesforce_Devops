@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Delete a task related to a case.  Task has total number defined (aka hours logged)</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Record id of related record</description>
+        <name>RelatedToId</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.WhatId}</expression>
+    </formulas>
+    <formulas>
+        <description>Actual hours with deleted task total hours removed</description>
+        <name>TotalHours</name>
+        <dataType>Number</dataType>
+        <expression>IF(ISBLANK({!Case.ActualHours__c}),0,{!Case.ActualHours__c}-{!$Record.Total_Number__c})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Total number of hours worked against a service contract</description>
+        <name>TotalServiceContractHours</name>
+        <dataType>Number</dataType>
+        <expression>IF(ISBLANK({!Case.ServiceContract.TotalHoursWorked__c}),0,{!Case.ServiceContract.TotalHoursWorked__c}-{!$Record.Total_Number__c})</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Task - Delete Related to Case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Task - Delete Related to Case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get case information</description>
+        <name>Case</name>
+        <label>Case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>UpdateCase</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Remove total hours from actual hours total</description>
+        <name>UpdateCase</name>
+        <label>Update Case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>UpdateServiceContract</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ActualHours__c</field>
+            <value>
+                <elementReference>TotalHours</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Remove hours on the task from the Total Hours Worked on the service contract</description>
+        <name>UpdateServiceContract</name>
+        <label>Update Service Contract</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Case.ServiceContractId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TotalHoursWorked__c</field>
+            <value>
+                <elementReference>TotalServiceContractHours</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ServiceContract</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Case</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Total_Number__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>WhatId</field>
+            <operator>StartsWith</operator>
+            <value>
+                <stringValue>500</stringValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

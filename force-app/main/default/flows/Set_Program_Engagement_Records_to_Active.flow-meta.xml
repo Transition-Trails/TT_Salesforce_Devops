@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Determines whether or not the program cohort status changed.</description>
+        <name>Cohort_Status_Changed</name>
+        <label>Cohort Status Changed</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Status_Planned_to_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.pmdm__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.pmdm__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Planned</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Related_Program_Engagements_Status</targetReference>
+            </connector>
+            <label>Status Planned to Active</label>
+        </rules>
+    </decisions>
+    <description>This flow will update the stage of program engagement records related to program cohort records that have had a status change of &quot;planned&quot; to &quot;active,&quot; from a program engagement stage of &quot;enrolled&quot; to &quot;active.&quot;</description>
+    <environments>Default</environments>
+    <interviewLabel>Set Program Engagement Records to Active {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Set Program Engagement Records to Active</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Updates the status of related program engagements to &quot;active.&quot;</description>
+        <name>Update_Related_Program_Engagements_Status</name>
+        <label>Update Related Program Engagements Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>pmdm__Stage__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Enrolled</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>pmdm__Stage__c</field>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.pmdm__ProgramEngagements__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Cohort_Status_Changed</targetReference>
+        </connector>
+        <object>pmdm__ProgramCohort__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

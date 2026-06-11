@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Content_Items__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Total related content items</description>
+    <inlineHelpText>Total related content items</inlineHelpText>
+    <label>Total Content Items</label>
+    <securityClassification>Public</securityClassification>
+    <summaryForeignKey>ContentItem__c.ContentTopic__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

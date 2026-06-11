@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>62.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <choices>
+        <description>Interaction done through email</description>
+        <name>chEmail</name>
+        <choiceText>Email</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Email</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Interaction was done via phone call</description>
+        <name>chPhone</name>
+        <choiceText>Phone</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Phone</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Interaction was done through text messaging</description>
+        <name>chText</name>
+        <choiceText>Text</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Text</stringValue>
+        </value>
+    </choices>
+    <description>Capture interaction with a person</description>
+    <dynamicChoiceSets>
+        <name>pcsInteractionType</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>TypeOfInteraction__c</picklistField>
+        <picklistObject>LogInteraction__mdt</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <description>Unique identifier for the task record type that captures log interaction</description>
+        <name>LogInteractionRecordtypeId</name>
+        <dataType>String</dataType>
+        <expression>{!$CustomMetadata.LogInteraction__mdt.Default.LogInteractionTaskRecordTypeId__c}</expression>
+    </formulas>
+    <formulas>
+        <description>Subject of the task to capture log interaction.  It includes the type of interaction in the name.</description>
+        <name>LogInteractionTaskSubject</name>
+        <dataType>String</dataType>
+        <expression>{!TypeOfInteraction}+&apos; Log Interaction &apos;</expression>
+    </formulas>
+    <interviewLabel>Log Interaction {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Log Interaction</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Create task to capture that interaction</description>
+        <name>CreateTaskForInteraction</name>
+        <label>Create Task for Interaction</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>InteractionNotes</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>LogInteractionRecordtypeId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>LogInteractionTaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <screens>
+        <description>Primary screen for the flow</description>
+        <name>PrimaryScreen</name>
+        <label>Primary Screen</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>CreateTaskForInteraction</targetReference>
+        </connector>
+        <fields>
+            <name>TypeOfInteraction</name>
+            <choiceReferences>pcsInteractionType</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Type of Interaction</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <fields>
+            <name>InteractionNotes</name>
+            <fieldText>Interaction Notes</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>PrimaryScreen</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+</Flow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TopicsWithNoContent</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Total_Content_Items__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Topics with No Content</label>
+</ListView>

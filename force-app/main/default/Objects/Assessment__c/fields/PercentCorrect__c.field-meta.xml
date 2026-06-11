@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PercentCorrect__c</fullName>
+    <description>Percent Correct</description>
+    <externalId>false</externalId>
+    <formula>IF( Total_Results__c &gt; 0,(ScoreCalc__c /Total_Results__c)*100,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Percent correct</inlineHelpText>
+    <label>Percent Correct</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpenIdea</fullName>
+    <columns>NAME</columns>
+    <columns>Title__c</columns>
+    <columns>ContentTopic__c</columns>
+    <columns>Format__c</columns>
+    <columns>Status__c</columns>
+    <columns>Due_Date__c</columns>
+    <columns>Content_Pillars__c</columns>
+    <columns>Content_Location__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Idea</value>
+    </filters>
+    <label>00 Idea</label>
+</ListView>

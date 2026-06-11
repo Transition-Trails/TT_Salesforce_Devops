@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type__c</fullName>
+    <description>Category of the activity</description>
+    <inlineHelpText>Category of the activity</inlineHelpText>
+    <label>Activity Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assess Your Knowledge</fullName>
+                <default>false</default>
+                <label>Assess Your Knowledge</label>
+            </value>
+            <value>
+                <fullName>Certificate</fullName>
+                <default>false</default>
+                <label>Certificate</label>
+            </value>
+            <value>
+                <fullName>Consent</fullName>
+                <default>false</default>
+                <label>Consent</label>
+            </value>
+            <value>
+                <fullName>Course/Module Evaluation</fullName>
+                <default>false</default>
+                <label>Course/Module Evaluation</label>
+            </value>
+            <value>
+                <fullName>Course/Module Feedback</fullName>
+                <default>false</default>
+                <label>Course/Module Feedback</label>
+            </value>
+            <value>
+                <fullName>eBook</fullName>
+                <default>false</default>
+                <label>eBook</label>
+            </value>
+            <value>
+                <fullName>Exam</fullName>
+                <default>false</default>
+                <label>Exam</label>
+            </value>
+            <value>
+                <fullName>File Assignment</fullName>
+                <default>false</default>
+                <label>File Assignment</label>
+            </value>
+            <value>
+                <fullName>Form - Introduce Yourself</fullName>
+                <default>false</default>
+                <label>Form - Introduce Yourself</label>
+            </value>
+            <value>
+                <fullName>Instructor Evaluation</fullName>
+                <default>false</default>
+                <label>Instructor Evaluation</label>
+            </value>
+            <value>
+                <fullName>Live Session</fullName>
+                <default>false</default>
+                <label>Live Session</label>
+            </value>
+            <value>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+                <label>Meeting</label>
+            </value>
+            <value>
+                <fullName>Presentation</fullName>
+                <default>false</default>
+                <label>Presentation</label>
+            </value>
+            <value>
+                <fullName>Reading Assignment</fullName>
+                <default>false</default>
+                <label>Reading Assignment</label>
+            </value>
+            <value>
+                <fullName>Reflection</fullName>
+                <default>false</default>
+                <label>Reflection</label>
+            </value>
+            <value>
+                <fullName>Self Assessment</fullName>
+                <default>false</default>
+                <label>Self Assessment</label>
+            </value>
+            <value>
+                <fullName>Social</fullName>
+                <default>false</default>
+                <label>Social</label>
+            </value>
+            <value>
+                <fullName>Think &amp; Share</fullName>
+                <default>false</default>
+                <label>Think &amp; Share</label>
+            </value>
+            <value>
+                <fullName>Upload Work</fullName>
+                <default>false</default>
+                <label>Upload Work</label>
+            </value>
+            <value>
+                <fullName>Video Lesson</fullName>
+                <default>false</default>
+                <label>Video Lesson</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Indicates the type of onboarding that needs to be done for the volunteer job</description>
+    <inlineHelpText>Indicates the type of onboarding that needs to be done for the volunteer job</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce User</fullName>
+                <default>false</default>
+                <label>Salesforce User</label>
+            </value>
+            <value>
+                <fullName>Profile</fullName>
+                <default>false</default>
+                <label>Profile</label>
+            </value>
+            <value>
+                <fullName>Permission Set Group</fullName>
+                <default>false</default>
+                <label>Permission Set Group</label>
+            </value>
+            <value>
+                <fullName>Permission Set</fullName>
+                <default>false</default>
+                <label>Permission Set</label>
+            </value>
+            <value>
+                <fullName>Google Workspace</fullName>
+                <default>false</default>
+                <label>Google Workspace</label>
+            </value>
+            <value>
+                <fullName>Digital Experience Site - volunteers</fullName>
+                <default>false</default>
+                <label>Digital Experience Site - volunteers</label>
+            </value>
+            <value>
+                <fullName>Digital Experience Site - academy</fullName>
+                <default>false</default>
+                <label>Digital Experience Site - academy</label>
+            </value>
+            <value>
+                <fullName>Slack Channel - Volunteers</fullName>
+                <default>false</default>
+                <label>Slack Channel - Volunteers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reflection_Prompt__c</fullName>
+    <description>The statement that participants should reflect on and write about</description>
+    <inlineHelpText>The statement that the participant should reflect on and write about</inlineHelpText>
+    <label>Reflection Prompt</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>
