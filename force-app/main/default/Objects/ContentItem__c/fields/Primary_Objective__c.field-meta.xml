@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Objective__c</fullName>
+    <description>Nurturing or Marketing; Aimed to inform, entertain, educate, inspire, or persuade the audience.  Should align with broader marketing and business objectives.</description>
+    <inlineHelpText>Nurturing or Marketing; Aimed to inform, entertain, educate, inspire, or persuade the audience.  Should align with broader marketing and business objectives.</inlineHelpText>
+    <label>Primary Objective</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nurturing - Informative</fullName>
+                <default>false</default>
+                <label>Nurturing - Informative</label>
+            </value>
+            <value>
+                <fullName>Nurturing - Entertaining</fullName>
+                <default>false</default>
+                <label>Nurturing - Entertaining</label>
+            </value>
+            <value>
+                <fullName>Nurturing - Inspiring</fullName>
+                <default>false</default>
+                <label>Nurturing - Inspiring</label>
+            </value>
+            <value>
+                <fullName>Nurturing - Persuading</fullName>
+                <default>false</default>
+                <label>Nurturing - Persuading</label>
+            </value>
+            <value>
+                <fullName>Marketing - Informative</fullName>
+                <default>false</default>
+                <label>Marketing - Informative</label>
+            </value>
+            <value>
+                <fullName>Marketing - Entertaining</fullName>
+                <default>false</default>
+                <label>Marketing - Entertaining</label>
+            </value>
+            <value>
+                <fullName>Marketing - Inspiring</fullName>
+                <default>false</default>
+                <label>Marketing - Inspiring</label>
+            </value>
+            <value>
+                <fullName>Marketing - Persuading</fullName>
+                <default>false</default>
+                <label>Marketing - Persuading</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

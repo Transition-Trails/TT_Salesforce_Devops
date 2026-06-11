@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delay_in_Days__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Number of days to delay executing this step in the sales funnel.  Delay is in days and based on the date a person begins the sales funnel</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of days to delay executing this step in the sales funnel.</inlineHelpText>
+    <label>Delay in Days</label>
+    <precision>18</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <securityClassification>Public</securityClassification>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

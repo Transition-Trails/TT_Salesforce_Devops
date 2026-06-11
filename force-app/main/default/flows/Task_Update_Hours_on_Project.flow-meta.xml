@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Path determine by type of change</description>
+        <name>StatusChange</name>
+        <label>Status Change</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Completed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Status</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Project</targetReference>
+            </connector>
+            <label>Completed</label>
+        </rules>
+    </decisions>
+    <description>Update total hours on related project</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Record id of related record</description>
+        <name>RelatedToId</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.WhatId}</expression>
+    </formulas>
+    <formulas>
+        <description>Actual hours with deleted task total hours removed</description>
+        <name>TotalHours</name>
+        <dataType>Number</dataType>
+        <expression>IF(ISBLANK({!Project.Total_Hours__c}),{!$Record.Total_Number__c},({!Project.Total_Hours__c}- {!$Record__Prior.Total_Number__c})+{!$Record.Total_Number__c})</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Task - Update Hours on Project {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Task - Update Hours on Project</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Pull information about project</description>
+        <name>Project</name>
+        <label>Project</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>UpdateRec</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>agf__PPM_Project__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>add total hours</description>
+        <name>UpdateRec</name>
+        <label>Update</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Total_Hours__c</field>
+            <value>
+                <elementReference>TotalHours</elementReference>
+            </value>
+        </inputAssignments>
+        <object>agf__PPM_Project__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>StatusChange</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>StartsWith</operator>
+            <value>
+                <stringValue>a1e</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>IsChanged</operator>
+        </filters>
+        <object>Task</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

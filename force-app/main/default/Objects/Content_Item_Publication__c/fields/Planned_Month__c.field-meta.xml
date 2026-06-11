@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Planned_Month__c</fullName>
+    <description>Month when item is planned for publication</description>
+    <externalId>false</externalId>
+    <formula>CASE (MONTH( Planned_Publication_Date__c ),
+1,&apos;01 Jan&apos;,
+2,&apos;02 Feb&apos;,
+3,&apos;03 Mar&apos;,
+4,&apos;04 Apr&apos;,
+5,&apos;05 May&apos;,
+6,&apos;06 Jun&apos;,
+7,&apos;07 Jul&apos;,
+8,&apos;08 Aug&apos;,
+9,&apos;09 Sep&apos;,
+10,&apos;10 Oct&apos;,
+11,&apos;11 Nov&apos;,
+12,&apos;12 Dec&apos;,&apos;&apos;)</formula>
+    <inlineHelpText>Month when item is planned for publication</inlineHelpText>
+    <label>Planned Month</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

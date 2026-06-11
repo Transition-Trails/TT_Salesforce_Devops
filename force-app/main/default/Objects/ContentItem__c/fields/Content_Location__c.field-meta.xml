@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Content_Location__c</fullName>
+    <description>Location of the file(s) for this subject Item</description>
+    <inlineHelpText>Location of the file(s) for this subject Item</inlineHelpText>
+    <label>Content Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

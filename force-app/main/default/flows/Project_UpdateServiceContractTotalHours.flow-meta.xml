@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Recalculated total hours on service contract</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Recalculated total hours</description>
+        <name>NewTotalHours</name>
+        <dataType>Number</dataType>
+        <expression>IF(ISBLANK({!$Record.Service_Contract__r.TotalHoursWorked__c}),
+     {!$Record.Total_Hours__c},
+    ({!$Record.Service_Contract__r.TotalHoursWorked__c}-{!$Record__Prior.Total_Hours__c}+{!$Record.Total_Hours__c}))</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Project - Update Total Hours {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Project - Update Service Contract Total Hours</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Recalculate total hours on service contract</description>
+        <name>Service_Contract</name>
+        <label>Service Contract</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Service_Contract__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>TotalHoursWorked__c</field>
+            <value>
+                <elementReference>NewTotalHours</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ServiceContract</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Service_Contract</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Total_Hours__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>agf__PPM_Project__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Engagement__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The program a contact is or has participated in</description>
+    <inlineHelpText>The program a contact is or has participated in</inlineHelpText>
+    <label>Program Engagement</label>
+    <referenceTo>pmdm__ProgramEngagement__c</referenceTo>
+    <relationshipLabel>Notes</relationshipLabel>
+    <relationshipName>Notes</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

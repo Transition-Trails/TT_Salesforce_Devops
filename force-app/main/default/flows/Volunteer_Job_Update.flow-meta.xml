@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Update fields on volunteer job</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Indicate if job is or is not active based on the approval status</description>
+        <name>InActive</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!ApprovalStatus}=&apos;Approved&apos;,False,True)</expression>
+    </formulas>
+    <interviewLabel>Volunteer Job Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Volunteer Job Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update approval status field and Inactive field</description>
+        <name>Update_Volunteer_Job_Fields</name>
+        <label>Update Volunteer Job Fields</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>VolunteerJobId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Approval_Status__c</field>
+            <value>
+                <elementReference>ApprovalStatus</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>GW_Volunteers__Inactive__c</field>
+            <value>
+                <elementReference>InActive</elementReference>
+            </value>
+        </inputAssignments>
+        <object>GW_Volunteers__Volunteer_Job__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Volunteer_Job_Fields</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Indicates if job was approved or not</description>
+        <name>ApprovalStatus</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Unique identifier for the volunteer record being approved</description>
+        <name>VolunteerJobId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

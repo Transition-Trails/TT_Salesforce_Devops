@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Runs service contract processing</description>
+    <environments>Default</environments>
+    <interviewLabel>Scheduled - Weekly Sunday 1pm {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Scheduled - Weekly Sunday 1pm</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Process_Service_Contracts</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Weekly</frequency>
+            <startDate>2026-01-18</startDate>
+            <startTime>13:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Activate, Deactivate or send notifications related to service contracts</description>
+        <name>Process_Service_Contracts</name>
+        <label>Process Service Contracts</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Service_Contract_processing</flowName>
+    </subflows>
+</Flow>

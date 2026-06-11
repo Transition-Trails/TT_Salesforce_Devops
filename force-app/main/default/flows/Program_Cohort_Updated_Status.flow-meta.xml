@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Status field updated</description>
+        <name>Status_Updated</name>
+        <label>Status Updated</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Planned_to_active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.pmdm__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.pmdm__Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Planned</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Program_Engagement_Stage</targetReference>
+            </connector>
+            <label>Planned to active</label>
+        </rules>
+    </decisions>
+    <description>Process related records when program cohort status changes</description>
+    <environments>Default</environments>
+    <interviewLabel>Program Cohort - Updated Status {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Program Cohort - Updated Status</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update the status to Active for all program engagement records with stage of Enrolled</description>
+        <name>Update_Program_Engagement_Stage</name>
+        <label>Update Program Engagement Stage</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>pmdm__Stage__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Enrolled</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>pmdm__Stage__c</field>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.pmdm__ProgramEngagements__r</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Status_Updated</targetReference>
+        </connector>
+        <object>pmdm__ProgramCohort__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

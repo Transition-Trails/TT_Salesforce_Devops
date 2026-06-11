@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Actions to be done when a work item is deleted</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Reduce value by 1</description>
+        <name>TotalWorkItems</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.agf__Epic__r.Total_Work_Items__c}-1</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Work - Delete {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Work - Delete</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Records_1</name>
+        <label>Update Records 1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.agf__Epic__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Total_Work_Items__c</field>
+            <value>
+                <elementReference>TotalWorkItems</elementReference>
+            </value>
+        </inputAssignments>
+        <object>agf__ADM_Epic__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Records_1</targetReference>
+        </connector>
+        <object>agf__ADM_Work__c</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

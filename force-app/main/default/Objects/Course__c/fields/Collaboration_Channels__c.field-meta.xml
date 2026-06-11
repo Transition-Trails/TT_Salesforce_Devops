@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Collaboration_Channels__c</fullName>
+    <description>All the collaboration channels (slack, MS Teams, ...) related to the course</description>
+    <inlineHelpText>All the collaboration channels (slack, MS Teams, ...) related to the course</inlineHelpText>
+    <label>Collaboration Channels</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>15</visibleLines>
+</CustomField>

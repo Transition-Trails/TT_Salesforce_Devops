@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>When a work record is created, create a related task to track this record and update total work items on related epic</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Estimated due date is 14 days from current date.</description>
+        <name>DueDate</name>
+        <dataType>Date</dataType>
+        <expression>IF(ISBLANK({!$Record.agf__Due_Date__c}),{!$Flow.CurrentDate}+14,DATEVALUE({!$Record.agf__Due_Date__c}))</expression>
+    </formulas>
+    <formulas>
+        <description>title of the task</description>
+        <name>TaskSubject</name>
+        <dataType>String</dataType>
+        <expression>&apos;Define: &apos;+{!$Record.agf__Subject__c}</expression>
+    </formulas>
+    <formulas>
+        <description>Calculate number of work items related to the epic</description>
+        <name>TotalWorkItems</name>
+        <dataType>Number</dataType>
+        <expression>IF(ISBLANK({!$Record.agf__Epic__r.Total_Work_Items__c}),1,{!$Record.agf__Epic__r.Total_Work_Items__c}+1)</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Work - Create task for a new work item {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Work - Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create a task against work is logged</description>
+        <name>Create_Task</name>
+        <label>Create Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Work</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>DueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.agf__Assignee__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>TaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>Update fields on work</description>
+        <name>Update_Work</name>
+        <label>Update Work</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.agf__Epic__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Total_Work_Items__c</field>
+            <value>
+                <elementReference>TotalWorkItems</elementReference>
+            </value>
+        </inputAssignments>
+        <object>agf__ADM_Epic__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Task</targetReference>
+        </connector>
+        <object>agf__ADM_Work__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

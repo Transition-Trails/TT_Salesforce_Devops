@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>This assignment collects the program cohorts</description>
+        <name>Collect_Program_Cohort</name>
+        <label>Collect Program Cohort</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>CollectedProgramCohorts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ProgramCohortRecord</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Cohort_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>This assignment sets up the program cohort record.</description>
+        <name>Hold_Cohort</name>
+        <label>Hold Cohort</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>ProgramCohortRecord.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop_Program_Cohorts.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ProgramCohortRecord.pmdm__Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Collect_Program_Cohort</targetReference>
+        </connector>
+    </assignments>
+    <description>This flow updates the status of program cohort records from &quot;planned&quot; to &quot;active&quot; when the start date is equal to the current date, then updates the status of all related program engagement records to &quot;active.&quot;</description>
+    <environments>Default</environments>
+    <interviewLabel>Set Cohort to Active on Start Date {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Set Cohort to Active on Start Date</label>
+    <loops>
+        <description>This loop checks each program cohort record collected.</description>
+        <name>Loop_Program_Cohorts</name>
+        <label>Loop Program Cohorts</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>Get_Program_Cohorts</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Hold_Cohort</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieve all cohorts with a start date equal to the current date and a status of planned.</description>
+        <name>Get_Program_Cohorts</name>
+        <label>Get Program Cohorts</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_Program_Cohorts</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>pmdm__StartDate__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>pmdm__Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Planned</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>pmdm__ProgramCohort__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update the status of the cohorts from &quot;planned&quot; to &quot;active.&quot;</description>
+        <name>Update_Cohort_Status</name>
+        <label>Update Cohort Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Loop_Program_Cohorts</targetReference>
+        </connector>
+        <inputReference>CollectedProgramCohorts</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Program_Cohorts</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2025-08-25</startDate>
+            <startTime>01:30:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>The collection of program cohorts</description>
+        <name>CollectedProgramCohorts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>pmdm__ProgramCohort__c</objectType>
+    </variables>
+    <variables>
+        <name>ProgramCohortRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>pmdm__ProgramCohort__c</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>angela@transitiontrails.org</contactEmail>
+    <contactPhone>972-854-1516</contactPhone>
+    <distributionState>Local</distributionState>
+    <iconUrl>https://login.salesforce.com/logos/Salesforce/SalesforcePlatform/icon.png</iconUrl>
+    <isProtected>false</isProtected>
+    <label>TT Salesforce Assesment</label>
+    <logoUrl>https://login.salesforce.com/logos/Salesforce/SalesforcePlatform/logo.png</logoUrl>
+    <orgScopedExternalApp>00DHp00000Auz8Y:TT_Salesforce_Assesment</orgScopedExternalApp>
+</ExternalClientApplication>

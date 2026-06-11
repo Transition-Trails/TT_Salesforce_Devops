@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>If NDA is due or not determines next steps</description>
+        <name>Is_NDA_Due</name>
+        <label>Is NDA Due</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>NDA_Overdue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>NDAOverdue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Inactivate_Contact_Volunteer_Status</targetReference>
+            </connector>
+            <label>NDA Overdue</label>
+        </rules>
+        <rules>
+            <name>NDA_Due</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>NDADue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>NDA Due</label>
+        </rules>
+    </decisions>
+    <description>Runs daily</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Indicates that NDA is due (aka over 7 days)</description>
+        <name>NDADue</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(ISBLANK({!$Record.Nondisclosure_Agreement_Signed__c}) &amp;&amp; ( {!$Record.Welcome_Packet_Sent_Date__c}+7 &gt;={!$Flow.CurrentDate}),FALSE,TRUE)</expression>
+    </formulas>
+    <formulas>
+        <description>If NDA has not been received within 14 days</description>
+        <name>NDAOverdue</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(ISBLANK({!$Record.Nondisclosure_Agreement_Signed__c}) &amp;&amp; ( {!$Record.Welcome_Packet_Sent_Date__c}+14 &gt;={!$Flow.CurrentDate}),FALSE,TRUE)</expression>
+    </formulas>
+    <interviewLabel>Contact - Scheduled Daily {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact - Scheduled Daily</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Change status to inactive because NDA not returned or no response at all.</description>
+        <name>Inactivate_Contact_Volunteer_Status</name>
+        <label>Inactivate Contact Volunteer Status</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>GW_Volunteers__Volunteer_Notes__c</field>
+            <value>
+                <stringValue>&quot;No Response&quot;</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>GW_Volunteers__Volunteer_Status__c</field>
+            <value>
+                <stringValue>Inactive</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_NDA_Due</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>GW_Volunteers__Volunteer_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Prospective</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Nondisclosure_Agreement_Signed__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <schedule>
+            <frequency>Weekly</frequency>
+            <startDate>2025-11-23</startDate>
+            <startTime>17:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

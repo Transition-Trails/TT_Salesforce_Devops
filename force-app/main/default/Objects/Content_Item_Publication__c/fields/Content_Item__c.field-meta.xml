@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Content_Item__c</fullName>
+    <description>The content to be published</description>
+    <inlineHelpText>The content to be published</inlineHelpText>
+    <label>Content Item</label>
+    <referenceTo>ContentItem__c</referenceTo>
+    <relationshipLabel>Content Item Publications</relationshipLabel>
+    <relationshipName>Content_Item_Publications</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
