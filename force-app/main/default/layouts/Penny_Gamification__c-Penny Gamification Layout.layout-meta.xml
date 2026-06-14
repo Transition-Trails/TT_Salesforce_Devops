@@ -34,10 +34,6 @@
                 <behavior>Edit</behavior>
                 <field>Awarded_By__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Note_c__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
