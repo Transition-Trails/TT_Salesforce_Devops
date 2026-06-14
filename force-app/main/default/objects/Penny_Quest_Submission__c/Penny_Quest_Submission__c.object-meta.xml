@@ -153,13 +153,12 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Penny Trail Config</label>
+    <label>Penny Quest Submission</label>
     <nameField>
-        <displayFormat>PTC-{0000}</displayFormat>
-        <label>Penny Trail Config Name</label>
-        <type>AutoNumber</type>
+        <label>Penny Quest Submission Name</label>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>Penny Trail Configs</pluralLabel>
+    <pluralLabel>Penny Quest Submissions</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

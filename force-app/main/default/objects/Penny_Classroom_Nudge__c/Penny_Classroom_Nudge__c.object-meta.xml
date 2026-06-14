@@ -153,13 +153,13 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Penny Trail Config</label>
+    <label>Penny Classroom Nudge</label>
     <nameField>
-        <displayFormat>PTC-{0000}</displayFormat>
-        <label>Penny Trail Config Name</label>
+        <displayFormat>PCN-{0000}</displayFormat>
+        <label>Penny Classroom Nudge Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Penny Trail Configs</pluralLabel>
+    <pluralLabel>Penny Classroom Nudges</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
