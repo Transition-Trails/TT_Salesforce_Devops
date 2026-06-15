@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Penny_Response_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( Penny_Response__c )</errorConditionFormula>
+    <errorDisplayField>Penny_Response__c</errorDisplayField>
+    <errorMessage>Penny response is required.</errorMessage>
+</ValidationRule>
