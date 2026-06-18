@@ -36,7 +36,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Note_c__c</field>
+                <field>Note__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
