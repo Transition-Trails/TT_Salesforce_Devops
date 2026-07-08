@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Platform__c</fullName>
+    <businessOwnerUser>kim@transitiontrails.org.prod.ttdev</businessOwnerUser>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Defines on which platform the automation runs</description>
+    <inlineHelpText>Defines on which platform the automation runs</inlineHelpText>
+    <label>Platform</label>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Make</fullName>
+                <default>true</default>
+                <label>Make</label>
+            </value>
+            <value>
+                <fullName>Salesforce Flow</fullName>
+                <default>false</default>
+                <label>Salesforce Flow</label>
+            </value>
+            <value>
+                <fullName>Zapier</fullName>
+                <default>false</default>
+                <label>Zapier</label>
+            </value>
+            <value>
+                <fullName>Ad-hoc</fullName>
+                <default>false</default>
+                <label>Ad-hoc</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_ID__c</fullName>
+    <businessOwnerUser>kim@transitiontrails.org.prod.ttdev</businessOwnerUser>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Platform-agnostic automation ID from the tool URL.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Platform-agnostic automation ID from the tool URL.</inlineHelpText>
+    <label>External ID</label>
+    <length>100</length>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
