@@ -562,7 +562,7 @@
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>TT Build Item Page</masterLabel>
+    <masterLabel>TT Build Item Page Automation</masterLabel>
     <sobjectType>TT_Build_Item__c</sobjectType>
     <template>
         <name>flexipage:recordHomeTemplateDesktop</name>
