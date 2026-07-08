@@ -5,7 +5,6 @@
     <fields>Environment__c</fields>
     <fields>RecordTypeId</fields>
     <fields>Status__c</fields>
-    <fields>TT_Automation__c</fields>
     <fields>Date_Pushed_to_Prod__c</fields>
     <label>TT Build Item Compact Layout</label>
 </CompactLayout>

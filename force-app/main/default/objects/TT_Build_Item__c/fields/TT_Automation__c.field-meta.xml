@@ -3,15 +3,14 @@
     <fullName>TT_Automation__c</fullName>
     <businessOwnerGroup>Leadership</businessOwnerGroup>
     <businessStatus>Active</businessStatus>
-    <complianceGroup>NA</complianceGroup>
-    <deleteConstraint>SetNull</deleteConstraint>
     <label>TT Automation</label>
     <referenceTo>TT_Automation__c</referenceTo>
-    <relationshipLabel>TT Build Items (TT Automation)</relationshipLabel>
-    <relationshipName>TT_Build_Items1</relationshipName>
-    <required>false</required>
-    <securityClassification>Internal</securityClassification>
+    <relationshipLabel>TT Build Items</relationshipLabel>
+    <relationshipName>TT_Build_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Lookup</type>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
 </CustomField>
