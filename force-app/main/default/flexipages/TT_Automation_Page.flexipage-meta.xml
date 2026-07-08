@@ -185,16 +185,6 @@
                 <identifier>RecordType__cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Work_Item__c</fieldItem>
-                <identifier>RecordWork_Item__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-79201823-e579-4c9c-9cd8-a5fe621ad8ee</name>
         <type>Facet</type>
     </flexiPageRegions>
