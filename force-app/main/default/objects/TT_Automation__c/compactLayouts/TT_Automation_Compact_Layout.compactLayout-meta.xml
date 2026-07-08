@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TT_Automation_Compact_Layout</fullName>
+    <fields>TT_Automation_Name__c</fields>
+    <fields>Platform__c</fields>
+    <fields>Status__c</fields>
+    <fields>Source_System__c</fields>
+    <fields>Target_System__c</fields>
+    <label>TT Automation Compact Layout</label>
+</CompactLayout>
