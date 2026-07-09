@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Penny_Trail__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>The active trail for Penny coaching context. Populated by enrollment sync or manually by admin.</description>
+    <inlineHelpText>The active trail for Penny coaching context. Populated by enrollment sync or manually by admin.</inlineHelpText>
+    <label>Penny Trail</label>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Guided Trail</fullName>
+                <default>false</default>
+                <label>Guided Trail</label>
+            </value>
+            <value>
+                <fullName>Foundations Trail</fullName>
+                <default>false</default>
+                <label>Foundations Trail</label>
+            </value>
+            <value>
+                <fullName>Trail of Mastery</fullName>
+                <default>false</default>
+                <label>Trail of Mastery</label>
+            </value>
+            <value>
+                <fullName>Community and Alumni.</fullName>
+                <default>false</default>
+                <label>Community and Alumni.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
