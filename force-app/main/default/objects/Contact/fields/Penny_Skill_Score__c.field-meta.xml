@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Penny_Skill_Score__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Penny&apos;s rolling composite skill score across all completed Skill Assessment records for this learner. Updated by ScoreAssessment Agentforce Action after each assessment completes.  Penny reads in L3 coaching context: &apos;Your current skill score is 72/100 — up from 58 at program start.&apos;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Penny&apos;s rolling composite skill score across all completed Skill Assessment records for this learner. Updated by ScoreAssessment Agentforce Action after each assessment completes.  Penny reads in L3 coaching context: &apos;Your current skill score is 72/100 — up from 58 at program start.&apos;</inlineHelpText>
+    <label>Penny Skill Score</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <securityClassification>Confidential</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
