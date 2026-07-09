@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Knowledge_Article__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Knowledge Article</label>
+    <referenceTo>Knowledge__kav</referenceTo>
+    <relationshipLabel>TT SOP Automations</relationshipLabel>
+    <relationshipName>TT_SOP_Automations</relationshipName>
+    <required>true</required>
+    <securityClassification>Internal</securityClassification>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
