@@ -204,16 +204,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Learner_Slack_User_Id__c</fieldItem>
-                <identifier>RecordLearner_Slack_User_Id__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Last_Assessment_Date__c</fieldItem>
                 <identifier>RecordLast_Assessment_Date__cField</identifier>
             </fieldInstance>
@@ -338,8 +328,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Slack_User_Id__c</fieldItem>
-                <identifier>RecordSlack_User_Id__cField</identifier>
+                <fieldItem>Record.Learner_Slack_User_Id__c</fieldItem>
+                <identifier>RecordLearner_Slack_User_Id__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-2a0c1e37-fa6f-4fdd-9424-d8949993c6a1</name>
