@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Learner_Slack_User_Id__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Learner Slack user ID (xUxxxxxx format). UNIQUE. Used to send DMs via Penny.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Learner Slack user ID (xUxxxxxx format). UNIQUE. Used to send DMs via Penny.</inlineHelpText>
+    <label>Learner Slack User Id</label>
+    <length>50</length>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
