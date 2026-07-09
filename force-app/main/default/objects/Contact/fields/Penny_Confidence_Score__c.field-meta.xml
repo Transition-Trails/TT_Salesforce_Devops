@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Penny_Confidence_Score__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>1-5 score. Updated by an authorized person or Penny.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>1-5 score. Updated by an authorized person or Penny.</inlineHelpText>
+    <label>Penny Confidence Score</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <securityClassification>Internal</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
