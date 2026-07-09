@@ -8,7 +8,7 @@
     <description>True after first Penny conversation + goal-setting. Default False.</description>
     <inlineHelpText>True after first Penny conversation + goal-setting. Default False.</inlineHelpText>
     <label>Penny Onboarding Complete</label>
-    <securityClassification>Internal</securityClassification>
+    <securityClassification>Confidential</securityClassification>
     <trackFeedHistory>false</trackFeedHistory>
     <type>Checkbox</type>
 </CustomField>

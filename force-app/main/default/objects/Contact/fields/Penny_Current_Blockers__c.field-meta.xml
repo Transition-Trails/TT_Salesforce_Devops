@@ -8,7 +8,7 @@
     <inlineHelpText>What is blocking them right now. Injected into Layer 3.</inlineHelpText>
     <label>Penny Current Blockers</label>
     <length>32768</length>
-    <securityClassification>Internal</securityClassification>
+    <securityClassification>Confidential</securityClassification>
     <trackFeedHistory>false</trackFeedHistory>
     <type>LongTextArea</type>
     <visibleLines>3</visibleLines>
