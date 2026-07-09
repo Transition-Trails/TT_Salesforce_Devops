@@ -8,7 +8,7 @@
     <inlineHelpText>The active trail for Penny coaching context. Populated by enrollment sync or manually by admin.</inlineHelpText>
     <label>Penny Trail</label>
     <required>false</required>
-    <securityClassification>Internal</securityClassification>
+    <securityClassification>Confidential</securityClassification>
     <trackFeedHistory>false</trackFeedHistory>
     <type>Picklist</type>
     <valueSet>

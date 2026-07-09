@@ -11,7 +11,7 @@
     <precision>2</precision>
     <required>false</required>
     <scale>0</scale>
-    <securityClassification>Internal</securityClassification>
+    <securityClassification>Confidential</securityClassification>
     <trackFeedHistory>false</trackFeedHistory>
     <type>Number</type>
     <unique>false</unique>

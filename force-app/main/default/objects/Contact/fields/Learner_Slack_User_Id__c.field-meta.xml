@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Penny_Current_Phase__c</fullName>
+    <fullName>Learner_Slack_User_Id__c</fullName>
     <businessOwnerGroup>Leadership</businessOwnerGroup>
     <businessStatus>Active</businessStatus>
     <complianceGroup>NA</complianceGroup>
-    <description>Where they are in the program. e.g. Sprint 8 — Demo prep.</description>
+    <description>Learner Slack user ID (xUxxxxxx format). UNIQUE. Used to send DMs via Penny.</description>
     <externalId>false</externalId>
-    <inlineHelpText>Where they are in the program. e.g. Sprint 8 — Demo prep.</inlineHelpText>
-    <label>Penny Current Phase</label>
-    <length>255</length>
+    <inlineHelpText>Learner Slack user ID (xUxxxxxx format). UNIQUE. Used to send DMs via Penny.</inlineHelpText>
+    <label>Learner Slack User Id</label>
+    <length>50</length>
     <required>false</required>
-    <securityClassification>Confidential</securityClassification>
+    <securityClassification>Internal</securityClassification>
     <trackFeedHistory>false</trackFeedHistory>
     <type>Text</type>
     <unique>false</unique>
