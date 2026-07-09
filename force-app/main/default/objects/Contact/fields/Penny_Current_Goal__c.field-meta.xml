@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Penny_Current_Goal__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Learner stated job goal + timeline. e.g. SF Admin at nonprofit in Dallas within 90 days.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Learner stated job goal + timeline. e.g. SF Admin at nonprofit in Dallas within 90 days.</inlineHelpText>
+    <label>Penny Current Goal</label>
+    <length>255</length>
+    <required>false</required>
+    <securityClassification>Confidential</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

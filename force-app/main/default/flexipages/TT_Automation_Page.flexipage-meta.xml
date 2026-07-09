@@ -479,6 +479,8 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Last_Run_Date__c</fieldItem>
                 <identifier>RecordLast_Run_Date__cField</identifier>
+                <fieldItem>Record.Last_Run_Status__c</fieldItem>
+                <identifier>RecordLast_Run_Status__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -489,6 +491,8 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Last_Run_Status__c</fieldItem>
                 <identifier>RecordLast_Run_Status__cField</identifier>
+                <fieldItem>Record.Last_Run_Date__c</fieldItem>
+                <identifier>RecordLast_Run_Date__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-30bf44f7-d11d-4738-9c8f-20ccbdaa624b</name>

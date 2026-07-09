@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Salesforce</fullName>
+        <default>false</default>
+        <label>Salesforce</label>
+    </customValue>
+    <customValue>
+        <fullName>Jotform</fullName>
+        <default>false</default>
+        <label>Jotform</label>
+    </customValue>
+    <customValue>
+        <fullName>Google Classroom</fullName>
+        <default>false</default>
+        <label>Google Classroom</label>
+    </customValue>
+    <customValue>
+        <fullName>Slack</fullName>
+        <default>false</default>
+        <label>Slack</label>
+    </customValue>
+    <customValue>
+        <fullName>Make</fullName>
+        <default>false</default>
+        <label>Make</label>
+    </customValue>
+    <customValue>
+        <fullName>Zapier</fullName>
+        <default>false</default>
+        <label>Zapier</label>
+    </customValue>
+    <customValue>
+        <fullName>Manual</fullName>
+        <default>false</default>
+        <label>Manual</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <description>List of all the   systems that need to be captured for TrailOS</description>
+    <masterLabel>System</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

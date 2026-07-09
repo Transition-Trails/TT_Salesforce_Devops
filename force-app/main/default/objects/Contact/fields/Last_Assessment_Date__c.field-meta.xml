@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Assessment_Date__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Updated by ScoreAssessment when a new Assessment__c record reaches Status = Completed for this Contact. Penny uses to flag stale data: if &gt;30 days since last assessment, proactively suggest a check-in (only on explicit request or during Weekly Intelligence Report generation, per OD-4).</description>
+    <inlineHelpText>Updated by ScoreAssessment when a new Assessment__c record reaches Status = Completed for this Contact. Penny uses to flag stale data: if &gt;30 days since last assessment, proactively suggest a check-in</inlineHelpText>
+    <label>Last Assessment Date</label>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>DateTime</type>
+</CustomField>
