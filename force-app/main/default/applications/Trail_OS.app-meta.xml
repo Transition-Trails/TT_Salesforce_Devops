@@ -95,16 +95,12 @@
     <tabs>Assessment__c</tabs>
     <tabs>standard-ProductWorkspace</tabs>
     <tabs>standard-Product2</tabs>
-    <tabs>Course_Activity_Completion__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Transition_Trails_Academy_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <fieldName>Contact__c</fieldName>
             <tab>Assessment__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Course_Activity_Completion__c</tab>
         </mappings>
         <mappings>
             <tab>Knowledge__kav</tab>
