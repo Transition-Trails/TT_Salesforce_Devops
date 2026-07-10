@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_Module__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>denormalized from Activity for rollup and reporting</description>
+    <inlineHelpText>denormalized from Activity for rollup and reporting</inlineHelpText>
+    <label>Course Module</label>
+    <referenceTo>Course_Module__c</referenceTo>
+    <relationshipLabel>Course Activity Completions</relationshipLabel>
+    <relationshipName>Course_Activity_Completions</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
