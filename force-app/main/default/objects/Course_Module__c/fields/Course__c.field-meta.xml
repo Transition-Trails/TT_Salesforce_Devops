@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Learner_Course__c</fullName>
+    <fullName>Course__c</fullName>
     <businessStatus>Active</businessStatus>
-    <label>Learner Course</label>
-    <referenceTo>Course_Enrollment__c</referenceTo>
-    <relationshipLabel>Learner Course Modules</relationshipLabel>
-    <relationshipName>Learner_Course_Modules</relationshipName>
+    <description>Course for which module is defined</description>
+    <inlineHelpText>Course for which module is defined</inlineHelpText>
+    <label>Course</label>
+    <referenceTo>Course__c</referenceTo>
+    <relationshipLabel>Course Modules</relationshipLabel>
+    <relationshipName>Course_Modules</relationshipName>
     <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
-    <securityClassification>Internal</securityClassification>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>MasterDetail</type>
     <writeRequiresMasterRead>false</writeRequiresMasterRead>
