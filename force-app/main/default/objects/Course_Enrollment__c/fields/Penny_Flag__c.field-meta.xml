@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Penny_Flag__c</fullName>
     <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
     <externalId>false</externalId>
     <label>Penny Flag</label>
     <length>255</length>
