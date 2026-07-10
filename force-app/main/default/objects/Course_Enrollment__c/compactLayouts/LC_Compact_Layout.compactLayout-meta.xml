@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>LC_Compact_Layout</fullName>
-    <fields>Course__c</fields>
-    <fields>Program_Engagement__c</fields>
-    <fields>LMS_Platform__c</fields>
-    <fields>Penny_Flag__c</fields>
-    <fields>Status__c</fields>
-    <fields>Progress_Pct__c</fields>
+    <fields>Name</fields>
     <label>LC Compact Layout</label>
 </CompactLayout>
