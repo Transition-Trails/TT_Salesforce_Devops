@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Course__c</fullName>
+    <fullName>Program_Engagement__c</fullName>
     <businessOwnerGroup>Leadership</businessOwnerGroup>
     <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
     <deleteConstraint>SetNull</deleteConstraint>
-    <description>Identifier of the course in which user is enrolled</description>
-    <inlineHelpText>Identifier of the course in which user is enrolled</inlineHelpText>
-    <label>Course</label>
-    <referenceTo>Course__c</referenceTo>
+    <description>tbd</description>
+    <label>Program Engagement</label>
+    <referenceTo>pmdm__ProgramEngagement__c</referenceTo>
     <relationshipLabel>Course Enrollments</relationshipLabel>
     <relationshipName>Learner_Courses</relationshipName>
     <required>false</required>

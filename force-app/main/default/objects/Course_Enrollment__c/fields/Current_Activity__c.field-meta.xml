@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Course__c</fullName>
-    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <fullName>Current_Activity__c</fullName>
     <businessStatus>Active</businessStatus>
     <deleteConstraint>SetNull</deleteConstraint>
-    <description>Identifier of the course in which user is enrolled</description>
-    <inlineHelpText>Identifier of the course in which user is enrolled</inlineHelpText>
-    <label>Course</label>
-    <referenceTo>Course__c</referenceTo>
+    <label>Current Activity</label>
+    <referenceTo>Course_Module_Activity__c</referenceTo>
     <relationshipLabel>Course Enrollments</relationshipLabel>
-    <relationshipName>Learner_Courses</relationshipName>
+    <relationshipName>Course_Enrollments</relationshipName>
     <required>false</required>
     <securityClassification>Internal</securityClassification>
     <trackHistory>false</trackHistory>
