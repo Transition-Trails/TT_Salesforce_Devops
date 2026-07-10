@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Runs__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>COUNT of all child Automation Log records from TT Build Item</description>
+    <inlineHelpText>COUNT of all child Automation Log records from TT Build Item</inlineHelpText>
+    <label>Total Runs</label>
+    <securityClassification>Internal</securityClassification>
+    <summaryFilterItems>
+        <field>TT_Build_Item__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Automation Log</value>
+    </summaryFilterItems>
+    <summaryForeignKey>TT_Build_Item__c.TT_Automation__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>
