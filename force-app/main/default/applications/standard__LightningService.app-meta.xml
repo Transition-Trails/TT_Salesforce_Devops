@@ -36,6 +36,11 @@
         <type>Flexipage</type>
         <pageOrSobjectType>Contact</pageOrSobjectType>
     </actionOverrides>
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Lets support agents work with multiple records across customer service channels on one screen</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
@@ -2522,11 +2527,43 @@
     <tabs>standard-Problem</tabs>
     <tabs>standard-ChangeRequest</tabs>
     <tabs>Knowledge__kav</tabs>
+    <tabs>Penny_Badge__c</tabs>
+    <tabs>Penny_Career_Review__c</tabs>
+    <tabs>Penny_Classroom_Nudge__c</tabs>
+    <tabs>Penny_Gamification__c</tabs>
+    <tabs>Penny_Interaction_Log__c</tabs>
+    <tabs>Penny_Quest_Submission__c</tabs>
+    <tabs>Penny_Weekly_Report__c</tabs>
+    <tabs>Penny_Trail_Config__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <tab>Knowledge__kav</tab>
+        </mappings>
+        <mappings>
+            <tab>Penny_Badge__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Penny_Career_Review__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Penny_Classroom_Nudge__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Penny_Gamification__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Penny_Interaction_Log__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Penny_Quest_Submission__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Penny_Trail_Config__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Penny_Weekly_Report__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>

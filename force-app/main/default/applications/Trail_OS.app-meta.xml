@@ -36,58 +36,11 @@
         <type>Flexipage</type>
         <pageOrSobjectType>agf__ADM_Epic__c</pageOrSobjectType>
     </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Knowledge_Article_Layout</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>Knowledge__kav</pageOrSobjectType>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Repository_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>sf_devops__Repository__c</pageOrSobjectType>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Repository_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>sf_devops__Repository__c</pageOrSobjectType>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Peoduct_Component_Group</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>ProductComponentGroup</pageOrSobjectType>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Peoduct_Component_Group</content>
-        <formFactor>Small</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>ProductComponentGroup</pageOrSobjectType>
-    </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
-        <logo>TT_Public_Website_and_Logo_Images</logo>
-        <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
-    <description>Academy App for managing the Academy programs and toolkits</description>
+    <description>Transition Trails Academy App for managing the Academy programs and toolkits</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
@@ -96,49 +49,87 @@
     <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Trail OS</label>
     <navType>Console</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Knowledge_Record_Page_SOP</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Knowledge__kav</pageOrSobjectType>
+        <recordType>Knowledge__kav.SOP</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Knowledge_Record_Page_SOP</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Knowledge__kav</pageOrSobjectType>
+        <recordType>Knowledge__kav.SOP</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Knowledge_Record_Page_Release_Notes</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Knowledge__kav</pageOrSobjectType>
+        <recordType>Knowledge__kav.Release_Note</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Knowledge_Record_Page_Release_Notes</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Knowledge__kav</pageOrSobjectType>
+        <recordType>Knowledge__kav.Release_Note</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <setupExperience>all</setupExperience>
-    <tabs>agf__PPM_Portfolio__c</tabs>
-    <tabs>Project__c</tabs>
-    <tabs>sf_devops__Project__c</tabs>
-    <tabs>agf__ADM_Epic__c</tabs>
-    <tabs>UseCase__c</tabs>
-    <tabs>standard-WorkPlan</tabs>
-    <tabs>agf__ADM_Work__c</tabs>
-    <tabs>standard-WorkOrder</tabs>
-    <tabs>standard-WorkQueue</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>Knowledge__kav</tabs>
+    <tabs>TT_Build_Item__c</tabs>
+    <tabs>pmdm__Program__c</tabs>
+    <tabs>Assessment__c</tabs>
+    <tabs>standard-ProductWorkspace</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>Course_Activity_Completion__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Transition_Trails_Academy_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
-            <tab>Project__c</tab>
+            <fieldName>Contact__c</fieldName>
+            <tab>Assessment__c</tab>
         </mappings>
         <mappings>
-            <tab>UseCase__c</tab>
+            <tab>Course_Activity_Completion__c</tab>
         </mappings>
         <mappings>
-            <fieldName>agf__Project__c</fieldName>
-            <tab>agf__ADM_Epic__c</tab>
+            <tab>Knowledge__kav</tab>
         </mappings>
         <mappings>
-            <tab>agf__ADM_Work__c</tab>
+            <tab>TT_Build_Item__c</tab>
         </mappings>
         <mappings>
-            <tab>agf__PPM_Portfolio__c</tab>
+            <tab>pmdm__Program__c</tab>
         </mappings>
         <mappings>
-            <fieldName>sf_devops__Platform_Repository__c</fieldName>
-            <tab>sf_devops__Project__c</tab>
+            <tab>standard-Account</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Case</tab>
         </mappings>
         <mappings>
             <fieldName>AccountId</fieldName>
-            <tab>standard-WorkOrder</tab>
+            <tab>standard-Contact</tab>
         </mappings>
         <mappings>
-            <fieldName>ParentRecordId</fieldName>
-            <tab>standard-WorkPlan</tab>
+            <tab>standard-Product2</tab>
         </mappings>
         <mappings>
-            <tab>standard-WorkQueue</tab>
+            <tab>standard-ProductWorkspace</tab>
         </mappings>
     </workspaceConfig>
 </CustomApplication>

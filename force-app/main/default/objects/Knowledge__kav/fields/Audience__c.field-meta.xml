@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audience__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <defaultValue>&quot;Internal (TT Team)&quot;</defaultValue>
+    <label>Audience</label>
+    <required>true</required>
+    <securityClassification>Internal</securityClassification>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Internal (TT Team)</fullName>
+                <default>false</default>
+                <label>Internal (TT Team)</label>
+            </value>
+            <value>
+                <fullName>Learners</fullName>
+                <default>false</default>
+                <label>Learners</label>
+            </value>
+            <value>
+                <fullName>Clients</fullName>
+                <default>false</default>
+                <label>Clients</label>
+            </value>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
