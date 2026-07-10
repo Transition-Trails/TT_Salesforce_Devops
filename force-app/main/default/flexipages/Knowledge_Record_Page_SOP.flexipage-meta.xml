@@ -352,16 +352,6 @@
                 <identifier>RecordNextReviewDateField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.ValidationStatus</fieldItem>
-                <identifier>RecordValidationStatusField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-bbbec69d-d3a2-45d3-962e-02a292729f6e</name>
         <type>Facet</type>
     </flexiPageRegions>
