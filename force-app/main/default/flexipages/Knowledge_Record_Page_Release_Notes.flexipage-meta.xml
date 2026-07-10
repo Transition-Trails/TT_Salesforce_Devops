@@ -206,16 +206,6 @@
                 <identifier>RecordUrlNameField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.ValidationStatus</fieldItem>
-                <identifier>RecordValidationStatusField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-5daf60e8-5d72-4578-bab0-fed89567b8ff</name>
         <type>Facet</type>
     </flexiPageRegions>
