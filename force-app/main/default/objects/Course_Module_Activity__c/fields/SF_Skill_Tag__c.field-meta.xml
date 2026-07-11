@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SF_Skill_Tag__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <description>Activity-level granularity for quest generation and RAG retrieval.</description>
+    <inlineHelpText>Activity-level granularity for quest generation and RAG retrieval.</inlineHelpText>
+    <label>SF Skill Tag</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Core-SF</fullName>
+                <default>false</default>
+                <label>Core-SF</label>
+            </value>
+            <value>
+                <fullName>NPSP-Nonprofit-Cloud</fullName>
+                <default>false</default>
+                <label>NPSP-Nonprofit-Cloud</label>
+            </value>
+            <value>
+                <fullName>Flow-Builder</fullName>
+                <default>false</default>
+                <label>Flow-Builder</label>
+            </value>
+            <value>
+                <fullName>Reports-Dashboards</fullName>
+                <default>false</default>
+                <label>Reports-Dashboards</label>
+            </value>
+            <value>
+                <fullName>Experience-Cloud</fullName>
+                <default>false</default>
+                <label>Experience-Cloud</label>
+            </value>
+            <value>
+                <fullName>Security-Access</fullName>
+                <default>false</default>
+                <label>Security-Access</label>
+            </value>
+            <value>
+                <fullName>Data-Management</fullName>
+                <default>false</default>
+                <label>Data-Management</label>
+            </value>
+            <value>
+                <fullName>Apex-Basics</fullName>
+                <default>false</default>
+                <label>Apex-Basics</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
