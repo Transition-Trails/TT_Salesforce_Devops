@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Engagement__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Links assessments to learner&apos;s active program enrollment.</description>
+    <inlineHelpText>Links assessments to learner&apos;s active program enrollment.</inlineHelpText>
+    <label>Program Engagement</label>
+    <referenceTo>pmdm__ProgramEngagement__c</referenceTo>
+    <relationshipLabel>Assessments</relationshipLabel>
+    <relationshipName>Assessments</relationshipName>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
