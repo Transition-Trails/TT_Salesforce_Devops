@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applies_To__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <description>Penny uses for role-based surfacing via GetRelevantKnowledge</description>
+    <inlineHelpText>Penny uses for role-based surfacing via GetRelevantKnowledge</inlineHelpText>
+    <label>Applies To</label>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce Admin</fullName>
+                <default>false</default>
+                <label>Salesforce Admin</label>
+            </value>
+            <value>
+                <fullName>Learner</fullName>
+                <default>false</default>
+                <label>Learner</label>
+            </value>
+            <value>
+                <fullName>Coach</fullName>
+                <default>false</default>
+                <label>Coach</label>
+            </value>
+            <value>
+                <fullName>Client</fullName>
+                <default>false</default>
+                <label>Client</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

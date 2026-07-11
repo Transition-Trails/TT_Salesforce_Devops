@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action_Required__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <defaultValue>false</defaultValue>
+    <description>If checked, fill in Action Details and Action Owner. Penny surfaces in CEO/COO briefings.</description>
+    <inlineHelpText>If checked, fill in Action Details and Action Owner. Penny surfaces in CEO/COO briefings.</inlineHelpText>
+    <label>Action Required</label>
+    <securityClassification>Internal</securityClassification>
+    <type>Checkbox</type>
+</CustomField>
