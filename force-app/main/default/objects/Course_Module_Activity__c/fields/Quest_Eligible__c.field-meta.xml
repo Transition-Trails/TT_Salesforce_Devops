@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quest_Eligible__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <defaultValue>false</defaultValue>
+    <description>Admin-controlled gate. Only activities where Quest_Eligible__c = true may be used as source material for Trail Quest generation by Penny.</description>
+    <inlineHelpText>Admin-controlled gate. Only activities where Quest_Eligible__c = true may be used as source material for Trail Quest generation by Penny.</inlineHelpText>
+    <label>Quest Eligible</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
