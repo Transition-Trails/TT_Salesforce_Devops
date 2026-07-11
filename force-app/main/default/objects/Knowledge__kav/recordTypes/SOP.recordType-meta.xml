@@ -2,7 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>SOP</fullName>
     <active>true</active>
-    <description>Standard Operating Procedure</description>
+    <description>Standard Operating Procedures</description>
     <label>SOP</label>
     <picklistValues>
         <picklist>Applies_To__c</picklist>
