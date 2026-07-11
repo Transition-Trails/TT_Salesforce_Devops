@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sprint__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Sprint</label>
+    <referenceTo>agf__ADM_Sprint__c</referenceTo>
+    <relationshipLabel>Knowledge</relationshipLabel>
+    <relationshipName>Knowledge</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

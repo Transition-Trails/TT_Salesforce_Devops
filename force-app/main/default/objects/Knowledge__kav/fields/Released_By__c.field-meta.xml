@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Released_By__c</fullName>
+    <businessOwnerGroup>Leadership</businessOwnerGroup>
+    <businessStatus>Active</businessStatus>
+    <complianceGroup>NA</complianceGroup>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Who deployed to Production.</description>
+    <inlineHelpText>Who deployed to Production.</inlineHelpText>
+    <label>Released By</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Knowledge</relationshipName>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <type>Lookup</type>
+</CustomField>
