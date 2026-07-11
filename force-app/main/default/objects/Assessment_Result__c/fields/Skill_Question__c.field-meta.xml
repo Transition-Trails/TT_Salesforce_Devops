@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Question__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Adds FK traceability from a result back to the source question bank.  This field fixes that. Enables Penny to retrieve the correct answer explanation when coaching an incorrect response.</description>
+    <inlineHelpText>Adds FK traceability from a result back to the source question bank.  This field fixes that. Enables Penny to retrieve the correct answer explanation when coaching an incorrect response.</inlineHelpText>
+    <label>Skill Question</label>
+    <referenceTo>SkillQuestion__c</referenceTo>
+    <relationshipLabel>Assessment Results</relationshipLabel>
+    <relationshipName>Assessment_Results</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

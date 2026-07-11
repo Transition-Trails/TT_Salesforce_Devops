@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Penny_Coaching_Note__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <description>Per-question coaching note written by Penny via Gemini after ScoreAssessment fires. For Multiple-Choice: Penny explains why the wrong answer was wrong, what the correct answer teaches. For Open-Ended: Penny provides qualitative rubric-based feedback.</description>
+    <inlineHelpText>Per-question coaching note written by Penny via Gemini after ScoreAssessment fires. For Multiple-Choice: Penny explains why the wrong answer was wrong, what the correct answer teaches. For Open-Ended: Penny provides qualitative rubric-based feedback.</inlineHelpText>
+    <label>Penny Coaching Note</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>
