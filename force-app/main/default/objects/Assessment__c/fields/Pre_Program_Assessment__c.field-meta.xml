@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Program_Assessment__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>On Post-Program records, points to the matching Pre-Program assessment. Enables growth calculation.</description>
+    <inlineHelpText>On Post-Program records, points to the matching Pre-Program assessment. Enables growth calculation.</inlineHelpText>
+    <label>Pre Program Assessment</label>
+    <referenceTo>Assessment__c</referenceTo>
+    <relationshipLabel>Assessments</relationshipLabel>
+    <relationshipName>Assessments</relationshipName>
+    <required>false</required>
+    <securityClassification>Internal</securityClassification>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
