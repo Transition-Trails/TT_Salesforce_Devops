@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skill_Category__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <description>Groups skills for cohort-level reporting and Agentforce Action filtering. Penny uses to surface relevant skills based on learner&apos;s current RESOLVE phase.</description>
+    <inlineHelpText>Groups skills for cohort-level reporting and Agentforce Action filtering. Penny uses to surface relevant skills based on learner&apos;s current RESOLVE phase.</inlineHelpText>
+    <label>Skill Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Salesforce-Admin</fullName>
+                <default>false</default>
+                <label>Salesforce-Admin</label>
+            </value>
+            <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+                <label>Communication</label>
+            </value>
+            <value>
+                <fullName>Problem-Solving</fullName>
+                <default>false</default>
+                <label>Problem-Solving</label>
+            </value>
+            <value>
+                <fullName>RESOLVE-Methodology</fullName>
+                <default>false</default>
+                <label>RESOLVE-Methodology</label>
+            </value>
+            <value>
+                <fullName>Stakeholder-Management</fullName>
+                <default>false</default>
+                <label>Stakeholder-Management</label>
+            </value>
+            <value>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+                <label>Documentation</label>
+            </value>
+            <value>
+                <fullName>Career-Readiness</fullName>
+                <default>false</default>
+                <label>Career-Readiness</label>
+            </value>
+            <value>
+                <fullName>Technical-Debt</fullName>
+                <default>false</default>
+                <label>Technical-Debt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
