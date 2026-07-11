@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Learner__c</fullName>
-    <deleteConstraint>Restrict</deleteConstraint>
+    <businessStatus>Active</businessStatus>
+    <deleteConstraint>SetNull</deleteConstraint>
     <label>Learner</label>
-    <referenceTo>Contact</referenceTo>
+    <referenceTo>pmdm__ProgramEngagement__c</referenceTo>
     <relationshipLabel>Penny Badge</relationshipLabel>
-    <relationshipName>Learner</relationshipName>
-    <required>true</required>
+    <relationshipName>Penny_Badge</relationshipName>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
 </CustomField>
