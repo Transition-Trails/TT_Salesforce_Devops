@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capability__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Which capability this prompt powers. Filter to same domain.</description>
+    <inlineHelpText>Which capability this prompt powers. Filter to same domain.</inlineHelpText>
+    <label>Capability</label>
+    <referenceTo>Penny_Capability__c</referenceTo>
+    <relationshipLabel>Penny Prompts</relationshipLabel>
+    <relationshipName>Penny_Prompts</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
