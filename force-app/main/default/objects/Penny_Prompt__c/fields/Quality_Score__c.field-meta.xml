@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quality_Score__c</fullName>
+    <description>0–100. Populated during quality review. Read-only after approval.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>0–100. Populated during quality review. Read-only after approval.</inlineHelpText>
+    <label>Quality Score</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
