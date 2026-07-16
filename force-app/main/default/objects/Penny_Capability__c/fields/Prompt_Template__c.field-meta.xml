@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prompt_Template__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Links to the prompt that powers this capability.</description>
+    <inlineHelpText>Links to the prompt that powers this capability.</inlineHelpText>
+    <label>Prompt Template</label>
+    <referenceTo>Penny_Prompt__c</referenceTo>
+    <relationshipLabel>Penny Capabilities</relationshipLabel>
+    <relationshipName>Penny_Capabilities</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
