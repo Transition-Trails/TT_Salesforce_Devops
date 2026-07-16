@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Penny_Capability_Compact_Layout</fullName>
+    <fields>Capability_Name__c</fields>
+    <fields>Domain__c</fields>
+    <fields>Status__c</fields>
+    <fields>Prompt_Template__c</fields>
+    <fields>Name</fields>
+    <fields>Active__c</fields>
+    <label>Penny Capability Compact Layout</label>
+</CompactLayout>
