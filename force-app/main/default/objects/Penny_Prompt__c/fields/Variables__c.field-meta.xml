@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Variables__c</fullName>
+    <description>Comma-separated variable tokens used in Template Text</description>
+    <inlineHelpText>Comma-separated variable tokens used in Template Text</inlineHelpText>
+    <label>Variables</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>
