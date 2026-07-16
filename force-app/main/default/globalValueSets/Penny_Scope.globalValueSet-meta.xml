@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Foundations Trail</fullName>
+        <default>false</default>
+        <label>Foundations Trail</label>
+    </customValue>
+    <customValue>
+        <fullName>Guided Trail</fullName>
+        <default>false</default>
+        <label>Guided Trail</label>
+    </customValue>
+    <customValue>
+        <fullName>Explorer&apos;s Trail</fullName>
+        <default>false</default>
+        <label>Explorer&apos;s Trail</label>
+    </customValue>
+    <customValue>
+        <fullName>Trail of Mastery</fullName>
+        <default>false</default>
+        <label>Trail of Mastery</label>
+    </customValue>
+    <customValue>
+        <fullName>Community &amp; Alumni</fullName>
+        <default>false</default>
+        <label>Community &amp; Alumni</label>
+    </customValue>
+    <customValue>
+        <fullName>All Trails</fullName>
+        <default>false</default>
+        <label>All Trails</label>
+    </customValue>
+    <masterLabel>Penny Scope</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
