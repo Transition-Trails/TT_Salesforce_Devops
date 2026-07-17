@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Session_Coach__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Filter to Contact records with RecordType = Coach</description>
+    <inlineHelpText>Filter to Contact records with RecordType = Coach</inlineHelpText>
+    <label>Session Coach</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>Coach</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Session Logs</relationshipLabel>
+    <relationshipName>Session_Logs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
