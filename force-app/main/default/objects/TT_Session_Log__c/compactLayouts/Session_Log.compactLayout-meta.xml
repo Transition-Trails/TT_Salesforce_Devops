@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Session_Log</fullName>
+    <fields>Session_Coach__c</fields>
+    <fields>Session_Date__c</fields>
+    <fields>Session_Type__c</fields>
+    <fields>Attendee_Count__c</fields>
+    <fields>Program_Engagement__c</fields>
+    <fields>Program_Cohort__c</fields>
+    <fields>Duration_Minutes__c</fields>
+    <label>Session Log</label>
+</CompactLayout>
