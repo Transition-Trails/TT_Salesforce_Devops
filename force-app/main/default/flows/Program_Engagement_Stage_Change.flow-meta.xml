@@ -400,6 +400,50 @@
     </actionCalls>
     <apiVersion>65.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customErrors>
+        <description>If program engagement was closed (completed or withdrawn), user must create a new record for an application.</description>
+        <name>Not_allowed_to_re_open_record</name>
+        <label>Not allowed to re-open record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>Stage cannot be reversed once Completed or Withdrawn&apos;</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <description>Checking to see if prior stage was completed or withdrawn.  If so, then stage cannot be modified to Applied.</description>
+        <name>Prior_Stage_Completed_or_withdrawn</name>
+        <label>Prior Stage Completed or withdrawn</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>SendReadyForInterviewEmailToApplicant</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Was_closed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.pmdm__Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.pmdm__Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Withdrawn</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Not_allowed_to_re_open_record</targetReference>
+            </connector>
+            <label>Was closed</label>
+        </rules>
+    </decisions>
     <decisions>
         <name>Program_Application_Status</name>
         <label>Program Application Status</label>
@@ -424,7 +468,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>SendReadyForInterviewEmailToApplicant</targetReference>
+                <targetReference>Prior_Stage_Completed_or_withdrawn</targetReference>
             </connector>
             <label>Applied - Ready for Interview</label>
         </rules>
@@ -525,7 +569,7 @@
         </rules>
         <rules>
             <name>Anything_Withdrawn</name>
-            <conditionLogic>(1 OR 3 OR 4 OR 5 OR 6) AND 2</conditionLogic>
+            <conditionLogic>(1 OR 3 OR 4 OR 5) AND 2</conditionLogic>
             <conditions>
                 <leftValueReference>$Record__Prior.pmdm__Stage__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -559,13 +603,6 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Ready for Interview</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record__Prior.pmdm__Stage__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Active</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -656,5 +693,5 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>
