@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source__c</fullName>
+    <description>Records how a lead, contact, or opportunity originally came to Transition Trails — the channel or activity that generated it.</description>
+    <externalId>false</externalId>
+    <formula>TEXT(pmdm__Contact__r.LeadSource)</formula>
+    <inlineHelpText>Records how a lead, contact, or opportunity originally came to Transition Trails — the channel or activity that generated it.</inlineHelpText>
+    <label>Lead Source</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
