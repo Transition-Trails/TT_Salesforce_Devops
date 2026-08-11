@@ -282,6 +282,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.Onboarding_Time_Days__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.OtherPhone</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -393,6 +398,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.pmdm__AttendanceSummary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.test_field__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
