@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TT_Sprint__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The sprint this story is assigned to. Blank = in backlog.</description>
+    <inlineHelpText>The sprint this story is assigned to. Blank = in backlog.</inlineHelpText>
+    <label>TT Sprint</label>
+    <referenceTo>TT_Sprint__c</referenceTo>
+    <relationshipLabel>TT Stories</relationshipLabel>
+    <relationshipName>TT_Stories</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

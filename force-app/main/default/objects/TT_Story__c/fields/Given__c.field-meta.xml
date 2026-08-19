@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Given__c</fullName>
+    <description>Precondition: &apos;Given a user is logged in as a Change Manager and a Tech Change Case exists&apos;</description>
+    <inlineHelpText>Precondition: &apos;Given a user is logged in as a Change Manager and a Tech Change Case exists&apos;</inlineHelpText>
+    <label>Given</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>
