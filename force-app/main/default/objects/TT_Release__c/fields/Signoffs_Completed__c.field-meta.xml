@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Signoffs_Completed__c</fullName>
+    <description>Total number of signoffs with the status of approved</description>
+    <inlineHelpText>Total number of signoffs with the status of approved</inlineHelpText>
+    <label>Signoffs Completed</label>
+    <summaryFilterItems>
+        <field>TT_Release_Signoff__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </summaryFilterItems>
+    <summaryForeignKey>TT_Release_Signoff__c.TT_Release__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

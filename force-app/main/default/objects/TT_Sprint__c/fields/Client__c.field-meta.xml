@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Populated for Digital Compass sprints only — the client account this sprint delivers for. Internal and Programs sprints leave blank</description>
+    <inlineHelpText>Populated for Digital Compass sprints only — the client account this sprint delivers for. Internal and Programs sprints leave blank</inlineHelpText>
+    <label>Client</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>TT Sprints</relationshipLabel>
+    <relationshipName>TT_Sprints</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

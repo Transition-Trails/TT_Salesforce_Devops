@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_for_Sprint__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Admin marks true when story is refined and safe to pull into sprint planning. Default = false. Backlog view filters on this.</description>
+    <inlineHelpText>Admin marks true when story is refined and safe to pull into sprint planning. Default = false. Backlog view filters on this.</inlineHelpText>
+    <label>Ready for Sprint</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

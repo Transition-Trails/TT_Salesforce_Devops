@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TT_Release__c</fullName>
+    <description>Release for which signoff is defined</description>
+    <inlineHelpText>Release for which signoff is defined</inlineHelpText>
+    <label>TT Release</label>
+    <referenceTo>TT_Release__c</referenceTo>
+    <relationshipLabel>TT Release Signoffs</relationshipLabel>
+    <relationshipName>TT_Release_Signoffs</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

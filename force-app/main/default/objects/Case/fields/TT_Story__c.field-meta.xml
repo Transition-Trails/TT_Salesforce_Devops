@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TT_Story__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Link to the story  if the case resulted in the creation or update of a story</description>
+    <inlineHelpText>Link to the story  if the case resulted in the creation or update of a story</inlineHelpText>
+    <label>TT Story</label>
+    <referenceTo>TT_Story__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

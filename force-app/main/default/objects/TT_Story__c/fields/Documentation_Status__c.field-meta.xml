@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Documentation_Status__c</fullName>
+    <description>Current state of documentation related to the story. Must = Published (or Documentation_Required__c = false) before Status can be set to Completed</description>
+    <inlineHelpText>Current state of documentation related to the story. Must = Published (or Documentation_Required__c = false) before Status can be set to Completed</inlineHelpText>
+    <label>Documentation Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+                <label>Not Required</label>
+            </value>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>In Draft</fullName>
+                <default>false</default>
+                <label>In Draft</label>
+            </value>
+            <value>
+                <fullName>In Review</fullName>
+                <default>false</default>
+                <label>In Review</label>
+            </value>
+            <value>
+                <fullName>Published</fullName>
+                <default>false</default>
+                <label>Published</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

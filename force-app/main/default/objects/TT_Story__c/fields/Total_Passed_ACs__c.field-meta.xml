@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Passed_ACs__c</fullName>
+    <description>Total acceptance criteria defined for the story that have passed</description>
+    <inlineHelpText>Total acceptance criteria defined for the story that have passed</inlineHelpText>
+    <label>Total Passed ACs</label>
+    <summaryFilterItems>
+        <field>TT_Acceptance_Criteria__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Passed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>TT_Acceptance_Criteria__c.TT_Story__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>When__c</fullName>
+    <description>Action: &apos;When they click Create Change Request on the Case record&apos;</description>
+    <inlineHelpText>Action: &apos;When they click Create Change Request on the Case record&apos;</inlineHelpText>
+    <label>When</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

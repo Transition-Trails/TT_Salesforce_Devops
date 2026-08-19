@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Tech — Configuration</fullName>
+        <default>false</default>
+        <label>Tech — Configuration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tech — Automation</fullName>
+        <default>false</default>
+        <label>Tech — Automation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tech — Integration</fullName>
+        <default>false</default>
+        <label>Tech — Integration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tech — Development</fullName>
+        <default>false</default>
+        <label>Tech — Development</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business — Content</fullName>
+        <default>false</default>
+        <label>Business — Content</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business — Product</fullName>
+        <default>false</default>
+        <label>Business — Product</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business — Process</fullName>
+        <default>false</default>
+        <label>Business — Process</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business — Compliance</fullName>
+        <default>false</default>
+        <label>Business — Compliance</label>
+    </standardValue>
+</StandardValueSet>
