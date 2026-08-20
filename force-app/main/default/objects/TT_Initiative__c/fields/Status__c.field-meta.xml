@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Indicates current state of the epic</description>
+    <inlineHelpText>Indicates current state of the epic</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>In Discovery</fullName>
+                <default>false</default>
+                <label>In Discovery</label>
+            </value>
+            <value>
+                <fullName>In Design</fullName>
+                <default>false</default>
+                <label>In Design</label>
+            </value>
+            <value>
+                <fullName>In Build</fullName>
+                <default>false</default>
+                <label>In Build</label>
+            </value>
+            <value>
+                <fullName>In Testing</fullName>
+                <default>false</default>
+                <label>In Testing</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
