@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Signoffs__c</fullName>
+    <description>Number of sign-off records created (should match the required sign-off number)</description>
+    <inlineHelpText>Number of sign-off records created (should match the required sign-off number)</inlineHelpText>
+    <label>Total Signoffs</label>
+    <summaryForeignKey>TT_Release_Signoff__c.TT_Release__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>
